@@ -1,0 +1,8 @@
+compile_commands.json
+.cache/
+blish
+build/
+*.swp
+*.cache
+*.tmp
+
