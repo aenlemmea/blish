@@ -42,10 +42,14 @@ action parse(const std::string& line) {
 	std::istringstream iss(line);
 	std::string token;
 
-	while(iss >> token) {
-		if (auto it = builtin_map.find(token); it != builtin_map.end()) {
+	if (!(iss >> token)) return act;
+	
+	if (auto it = builtin_map.find(token); it != builtin_map.end()) {
 			act.builtin = it->second;			
-		}
+	}
+	act.push_arg(token.c_str());
+	
+	while(iss >> token) {
 		act.push_arg(token.c_str());
 	}
 	return act;
