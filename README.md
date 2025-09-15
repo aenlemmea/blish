@@ -14,9 +14,17 @@ git clone https://github.com/aenlemmea/blish && cd blish/
 bear -- make
 ```
 
-## Running
+### Running
 
 ```bash
 ./blish
 ```
 
+### TODO
+
+[ ] Signal Handling
+[ ] Pipes
+[ ] Env Setup
+[ ] `export`
+[ ] Command history
+[ ] Config Implementation 
